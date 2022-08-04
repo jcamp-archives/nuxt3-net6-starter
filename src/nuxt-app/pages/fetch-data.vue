@@ -2,7 +2,7 @@
 import { format } from 'date-fns'
 import type { Forecast } from '../models/Forecast'
 
-const { pending, data: forecasts } = await useLazyFetch<Forecast[]>('/weatherforecast', { initialCache: false })
+const { pending, data: forecasts } = await useLazyFetch<Forecast[]>('/weatherforecast', { initialCache: false, server: false })
 
 const getColor = (temperature: number | undefined): string => {
   if (temperature! < 0)

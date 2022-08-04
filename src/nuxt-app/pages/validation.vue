@@ -33,6 +33,7 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
     <FormKit
       v-model="model"
       type="form"
+      :submit-attrs="{ inputClass: 'btn' }"
       @submit="submitHandler"
     >
       <FormKit
@@ -54,8 +55,6 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
         validation="email|required"
       />
     </FormKit>
-  </div>
-  <div class="w-50% m-auto text-left">
     <pre>{{ model }}</pre>
   </div>
 </template>

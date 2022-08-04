@@ -1,15 +1,9 @@
 <template>
-  <div
-    text="xl gray4"
-    m-5
-    flex
-    justify-center
-    gap-3
-  >
-    <NuxtLink i-carbon-campsite to="/" />
-    <NuxtLink i-carbon-temperature to="/fetch-data" />
-    <NuxtLink i-carbon-data-error to="/validation" />
-    <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
+  <div class="text-xl text-gray4 m-5 flex justify-center gap-3">
+    <NuxtLink class="i-carbon-campsite" to="/" />
+    <NuxtLink class="i-carbon-temperature" to="/fetch-data" />
+    <NuxtLink class="i-carbon-data-error" to="/validation" />
+    <a class="i-carbon-logo-github" href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
     <DarkToggle />
   </div>
 </template>

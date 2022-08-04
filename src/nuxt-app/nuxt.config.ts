@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@vueuse/nuxt',
+    '@nuxtjs/tailwindcss',
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
@@ -20,10 +21,10 @@ export default defineNuxtConfig({
     viteNode: false,
   },
   unocss: {
-    preflight: true,
+    preflight: false,
   },
   colorMode: {
     classSuffix: '',
   },
-  ssr: false,
+  // ssr: false,
 })

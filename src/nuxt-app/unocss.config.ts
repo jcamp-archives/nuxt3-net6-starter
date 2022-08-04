@@ -1,4 +1,26 @@
+// If you prefer Uno to handle everything, use the original config, commented out below
 import {
+  defineConfig,
+  presetIcons,
+  presetMini,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
+
+export default defineConfig({
+  presets: [
+    presetMini(),
+    presetIcons({
+      scale: 1.2,
+    }),
+  ],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+  ],
+})
+
+/* import {
   defineConfig,
   presetAttributify,
   presetIcons,
@@ -34,3 +56,4 @@ export default defineConfig({
     transformerVariantGroup(),
   ],
 })
+*/
