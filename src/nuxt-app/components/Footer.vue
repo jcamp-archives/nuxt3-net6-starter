@@ -8,6 +8,7 @@
   >
     <NuxtLink i-carbon-campsite to="/" />
     <NuxtLink i-carbon-temperature to="/fetch-data" />
+    <NuxtLink i-carbon-data-error to="/validation" />
     <a i-carbon-logo-github href="https://github.com/antfu/vitesse-nuxt3" target="_blank" />
     <DarkToggle />
   </div>

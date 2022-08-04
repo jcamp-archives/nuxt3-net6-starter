@@ -18,5 +18,5 @@ const proxy = {
 
 export default {
   '/weatherforecast': proxy,
-//  '/api': proxy,
+  '/api': proxy,
 }
