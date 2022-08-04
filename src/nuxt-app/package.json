@@ -10,6 +10,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
+  "dependencies": {
+    "date-fns": "^2.23.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
     "@iconify-json/carbon": "^1.1.6",

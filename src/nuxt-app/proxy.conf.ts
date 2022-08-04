@@ -13,10 +13,10 @@ import https from 'https'
 const proxy = {
   target: 'https://[::1]:5001',
   secure: false,
-  agent: new https.Agent()
+  agent: new https.Agent(),
 }
 
 export default {
   '/weatherforecast': proxy,
-  '/api': proxy
+//  '/api': proxy,
 }
