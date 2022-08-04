@@ -5,8 +5,8 @@ import PROXY_CONFIG from './proxy.conf'
 export default defineNuxtConfig({
   vite: {
     server: {
-      proxy: PROXY_CONFIG
-    }
+      proxy: PROXY_CONFIG,
+    },
   },
   modules: [
     '@vueuse/nuxt',
