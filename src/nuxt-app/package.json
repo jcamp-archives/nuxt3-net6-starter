@@ -1,0 +1,16 @@
+{
+  "name": "nuxt3-net6-starter",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "node aspnetcore-https && run-script-os",
+    "dev:windows": "nuxt dev --port 5002 --https --ssl-cert %APPDATA%\\ASP.NET\\https\\%npm_package_name%.pem --ssl-key %APPDATA%\\ASP.NET\\https\\%npm_package_name%.key",
+    "dev:default": "nuxt dev --port 5002 --https --ssl-cert $HOME/.aspnet/https/${npm_package_name}.pem --ssl-key $HOME/.aspnet/https/${npm_package_name}.key",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.6",
+    "run-script-os": "^1.1.6"
+  }
+}

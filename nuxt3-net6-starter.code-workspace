@@ -1,0 +1,112 @@
+{
+  "folders": [
+    {
+      "path": "src/nuxt-app",
+      "name": "NuxtApp"
+    },
+    {
+      "path": "src/dotnet-server",
+      "name": "DotNetServer"
+    },
+    {
+      "path": ".",
+      "name": "Root"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/bin": true,
+      "**/obj": true
+    },
+    "files.eol": "\n"
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "NET 6.0 Watch",
+        "command": "dotnet",
+        "type": "process",
+        "args": ["watch"],
+        "isBackground": true,
+        "problemMatcher": {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*Building....*$",
+            "endsPattern": "^.*Application started.*$"
+          }
+        },
+        "presentation": {
+          "echo": false,
+          "reveal": "always",
+          "focus": false,
+          "panel": "dedicated",
+          "showReuseMessage": false,
+          "clear": true
+        },
+        "detail": "Starts NET 6.0 Watch with Hot Reload",
+        "promptOnClose": false,
+        "options": {
+          "cwd": "${workspaceFolder:DotNetServer}",
+          "env": {
+            "ASPNETCORE_ENVIRONMENT": "Development"
+          }
+        }
+      },
+      {
+        "label": "Nuxt Server",
+        "command": "pnpm",
+        "type": "shell",
+        "args": ["dev"],
+        "problemMatcher": {
+          "pattern": [
+            {
+              "regexp": ".",
+              "file": 1,
+              "location": 2,
+              "message": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*Waiting for debug connection.*$",
+            "endsPattern": "^.*server running.*$"
+          }
+        },
+        "isBackground": true,
+        "presentation": {
+          "echo": false,
+          "reveal": "always",
+          "focus": false,
+          "panel": "dedicated",
+          "showReuseMessage": false,
+          "clear": true
+        },
+        "detail": "Start the Nuxt Server",
+        "promptOnClose": false,
+        "options": {
+          "cwd": "${workspaceFolder:NuxtApp}"
+        }
+      },
+      {
+        "label": "Start NET 6.0 Watch and Nuxt Server",
+        "detail": "Launches both dev servers for full Hot Reload",
+        "dependsOn": ["NET 6.0 Watch", "Nuxt Server"],
+        "dependsOrder": "sequence",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+}
