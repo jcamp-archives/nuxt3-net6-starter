@@ -10,12 +10,15 @@ specifiers:
   '@pinia/nuxt': ^0.3.0
   '@sfxcode/formkit-primevue': ^0.6.0
   '@sfxcode/nuxt-primevue': ^0.6.0
+  '@tailwindcss/forms': ^0.5.2
+  '@tailwindcss/typography': ^0.5.4
   '@unocss/nuxt': ^0.44.5
   '@vueuse/nuxt': ^8.9.4
   date-fns: ^2.23.0
   eslint: ^8.20.0
   nuxt: ^3.0.0-rc.6
   pinia: ^2.0.16
+  primeicons: ^5.0.0
   primevue: ^3.15.0
   run-script-os: ^1.1.6
   sass: ^1.54.0
@@ -35,12 +38,15 @@ devDependencies:
   '@pinia/nuxt': 0.3.1_typescript@4.7.4
   '@sfxcode/formkit-primevue': 0.6.0_tailwindcss@3.1.7
   '@sfxcode/nuxt-primevue': 0.6.0_tailwindcss@3.1.7
+  '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.7
+  '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.7
   '@unocss/nuxt': 0.44.7
   '@vueuse/nuxt': 8.9.4
   eslint: 8.21.0
   nuxt: 3.0.0-rc.6_sass@1.54.3
   pinia: 2.0.17_typescript@4.7.4
-  primevue: 3.15.0
+  primeicons: 5.0.0
+  primevue: 3.15.0_primeicons@5.0.0
   run-script-os: 1.1.6
   sass: 1.54.3
   tailwindcss: 3.1.7
@@ -540,7 +546,7 @@ packages:
     resolution: {integrity: sha512-idgMbrKAaYgi250VZHGmsGR66EQQXodRDzvYJhJjzGhx6+Te8Cl9inpNM8i0Ek0PBZVKsSvo+7z9s45hSha0HA==}
     dependencies:
       '@formkit/vue': 1.0.0-beta.10_tailwindcss@3.1.7
-      '@nuxt/kit': /@nuxt/kit-edge/3.0.0-rc.6-27660452.463c15e
+      '@nuxt/kit': /@nuxt/kit-edge/3.0.0-rc.6-27661960.60656df
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -777,11 +783,11 @@ packages:
     resolution: {integrity: sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==}
     dev: true
 
-  /@nuxt/kit-edge/3.0.0-rc.6-27660452.463c15e:
-    resolution: {integrity: sha512-etgTLFwLUtwUdyhyZ/ISvSHm/mDlKKrKWmKBNROA/GOLFCXAn/e8rVW2WaFlt8c2B/slmj+Xet3IqtLX1HF/Xw==}
+  /@nuxt/kit-edge/3.0.0-rc.6-27661960.60656df:
+    resolution: {integrity: sha512-pKoBM8d62K3IVs9SB/Q0j72m+hRtaOtIKkZYMxoGZbGFiIhamm8XEFtrc1OtTA+0CVoMuQTcKbRcXc/F3o2+Hg==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0}
     dependencies:
-      '@nuxt/schema': /@nuxt/schema-edge/3.0.0-rc.6-27660452.463c15e
+      '@nuxt/schema': /@nuxt/schema-edge/3.0.0-rc.6-27661960.60656df
       c12: 0.2.9
       consola: 2.15.3
       defu: 6.0.0
@@ -913,8 +919,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/schema-edge/3.0.0-rc.6-27660452.463c15e:
-    resolution: {integrity: sha512-GNsFDMS/kPOI4npSjRdS8KjOjQbhYPxWUWcDuMPvw5pTVEDSPsPNaXMv7n2gC9yLV25L9gXTpbK90o4fPLTPMA==}
+  /@nuxt/schema-edge/3.0.0-rc.6-27661960.60656df:
+    resolution: {integrity: sha512-Odpw9uF8tf69iazIxPK0gy3RqB1R1utfwX2DcPCuxQpe5Z68i/V/JUevzDvvMddiG52UHgkJBcFAHGVfZqCNvA==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0}
     dependencies:
       c12: 0.2.9
@@ -1250,6 +1256,26 @@ packages:
       - vue
       - webpack
       - windicss
+    dev: true
+
+  /@tailwindcss/forms/0.5.2_tailwindcss@3.1.7:
+    resolution: {integrity: sha512-pSrFeJB6Bg1Mrg9CdQW3+hqZXAKsBrSG9MAfFLKy1pVA4Mb4W7C0k7mEhlmS2Dfo/otxrQOET7NJiJ9RrS563w==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.1.7
+    dev: true
+
+  /@tailwindcss/typography/0.5.4_tailwindcss@3.1.7:
+    resolution: {integrity: sha512-QEdg40EmGvE7kKoDei8zr5sf4D1pIayHj4R31bH3lX8x2BtTiR+jNejYPOkhbmy3DXgkMF9jC8xqNiGFAuL9Sg==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      tailwindcss: 3.1.7
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -4749,6 +4775,10 @@ packages:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
     dev: true
 
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: true
+
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
     dev: true
@@ -4962,6 +4992,11 @@ packages:
   /min-indent/1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimatch/3.0.8:
@@ -6159,13 +6194,6 @@ packages:
 
   /primeicons/5.0.0:
     resolution: {integrity: sha512-heygWF0X5HFI1otlZE62pp6ye7sZ8om78J9au2BRkg8O7Y8AHTZ9qKMRzchZUHLe8zUAvdi6hZzzm9XxgwIExw==}
-    dev: true
-
-  /primevue/3.15.0:
-    resolution: {integrity: sha512-WOOjUJ53DUbYqh+jhxciNNrHiets4tgGaCkAaPSP3CrFvXBK2Vs38cPbVd+iVhJMsUoT//+pkP58j7eE8BcF8Q==}
-    peerDependencies:
-      primeicons: ^5.0.0
-      vue: ^3.0.0
     dev: true
 
   /primevue/3.15.0_primeicons@5.0.0:
