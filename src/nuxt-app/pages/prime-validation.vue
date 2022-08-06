@@ -25,7 +25,7 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
 
 <template>
   <div class="w-50% m-auto text-left">
-    <h4>Tailwind Validation Sample</h4>
+    <h4>Prime Validation Sample</h4>
     <hr class="mb-5">
     <div v-if="message" class="alert alert-success" role="alert">
       {{ message }}
@@ -33,25 +33,25 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
     <FormKit
       v-model="model"
       type="form"
-      :submit-attrs="{ inputClass: 'btn' }"
+      :submit-attrs="{ inputClass: 'p-button p-component' }"
       @submit="submitHandler"
     >
       <FormKit
         name="name"
         label="Full Name"
-        type="text"
+        type="primeInputText"
         validation="required|length:1,50"
       />
       <FormKit
         name="age"
         label="Age"
-        type="number"
+        type="primeInputNumber"
         validation="required|min:0|max:150"
       />
       <FormKit
         name="emailAddress"
         label="Email"
-        type="email"
+        type="primeInputText"
         validation="email|required"
       />
     </FormKit>

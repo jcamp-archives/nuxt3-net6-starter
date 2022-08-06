@@ -1,6 +1,8 @@
 import type { DefaultConfigOptions } from '@formkit/vue'
+import { primeInputs } from '@sfxcode/formkit-primevue'
 
 const config: DefaultConfigOptions = {
+  inputs: primeInputs,
   config: {
     rootClasses(sectionKey, node) {
       const type = node.props.type
