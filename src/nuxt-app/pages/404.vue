@@ -3,13 +3,16 @@ const router = useRouter()
 </script>
 
 <template>
-  <main class="px-4 py-10 text-center teal-700 dark:gray-200">
+  <main class="teal-700 dark:gray-200 px-4 py-10 text-center">
     <div class="text-4xl">
       <div class="i-carbon-warning inline-block" />
     </div>
     <div>Not found</div>
     <div>
-      <button class="btn text-sm m-3 t-8" @click="router.back()">
+      <button
+        class="btn t-8 m-3 text-sm"
+        @click="router.back()"
+      >
         Back
       </button>
     </div>

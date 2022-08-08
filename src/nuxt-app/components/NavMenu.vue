@@ -8,17 +8,25 @@ const ToggleNavMenu = (): void => {
 
 <template>
   <div
-    class="flex flex-col flex-shrink-0 text-white md:w-72 md:h-screen bg-gradient-to-b-70 from-blazor-blue to-blazor-indigo"
+    class="flex flex-shrink-0 flex-col bg-gradient-to-b-70 from-blazor-blue to-blazor-indigo text-white md:h-screen md:w-72"
   >
-    <div class="flex flex-row items-center justify-between px-4 text-white bg-black h-14 bg-opacity-40">
-      <nuxt-link to="/" class="text-xl text-white">
+    <div
+      class="flex h-14 flex-row items-center justify-between bg-black bg-opacity-40 px-4 text-white"
+    >
+      <nuxt-link
+        to="/"
+        class="text-xl text-white"
+      >
         Nuxt3 Net6 Validation
       </nuxt-link>
       <button
-        class="px-2 py-1 text-white text-opacity-50 bg-white border border-white rounded md:hidden bg-opacity-10 border-opacity-10"
+        class="rounded border border-white border-opacity-10 bg-white bg-opacity-10 px-2 py-1 text-white text-opacity-50 md:hidden"
         @click="ToggleNavMenu"
       >
-        <svg class="fill-current h-7 w-7" viewBox="0 0 24 24">
+        <svg
+          class="h-7 w-7 fill-current"
+          viewBox="0 0 24 24"
+        >
           <path
             fill-rule="evenodd"
             d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
@@ -26,8 +34,11 @@ const ToggleNavMenu = (): void => {
         </svg>
       </button>
     </div>
-    <div :class="{ collapse: collapseNavMenu }" @click="ToggleNavMenu">
-      <ul class="flex flex-col p-4 space-y-2">
+    <div
+      :class="{ collapse: collapseNavMenu }"
+      @click="ToggleNavMenu"
+    >
+      <ul class="flex flex-col space-y-2 p-4">
         <!-- <li v-for="(item, i) in items" :key="i">
           <router-link :to="item.link" exact>
             <component :is="item.icon" class="w-6 mr-3" aria-hidden="true"></component> {{ item.title }}
@@ -36,22 +47,23 @@ const ToggleNavMenu = (): void => {
 
         <li>
           <nuxt-link to="/">
-            <span class="i-carbon-home w-6 mr-3" /> Home
+            <span class="i-carbon-home mr-3 w-6" /> Home
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/Fetch-Data">
-            <span class="i-carbon-list w-6 mr-3" /> Fetch Data
+            <span class="i-carbon-list mr-3 w-6" /> Fetch Data
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/Validation">
-            <span class="i-carbon-data-error w-6 mr-3" /> Validation
+            <span class="i-carbon-data-error mr-3 w-6" /> Validation
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/prime-validation">
-            <span class="text-blue-700 i-carbon-data-error w-6 mr-3" /> Prime Validation
+            <span class="i-carbon-data-error mr-3 w-6 text-blue-700" /> Prime
+            Validation
           </nuxt-link>
         </li>
       </ul>
@@ -61,10 +73,10 @@ const ToggleNavMenu = (): void => {
 
 <style scoped>
 li a {
-  @apply flex flex-row items-center h-12 px-4 py-2 text-sm text-gray-300 bg-white bg-opacity-0 rounded hover:bg-opacity-10;
+  @apply flex h-12 flex-row items-center rounded bg-white bg-opacity-0 px-4 py-2 text-sm text-gray-300 hover:bg-opacity-10;
 }
 
 li :deep(a.router-link-exact-active) {
-  @apply text-white bg-opacity-25;
+  @apply bg-opacity-25 text-white;
 }
 </style>

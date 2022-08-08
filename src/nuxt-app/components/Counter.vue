@@ -1,16 +1,22 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 const { count, inc, dec } = useCount()
 </script>
 
 <template>
-  <div class="inline-flex my-3">
-    <button class="btn p-2 rounded-full" @click="dec()">
+  <div class="my-3 inline-flex">
+    <button
+      class="btn rounded-full p-2"
+      @click="dec()"
+    >
       <div class="i-carbon-subtract" />
     </button>
-    <div class="font-mono w-15 m-auto inline-block">
+    <div class="w-15 m-auto inline-block font-mono">
       {{ count }}
     </div>
-    <button class="btn p-2 rounded-full" @click="inc()">
+    <button
+      class="btn rounded-full p-2"
+      @click="inc()"
+    >
       <div class="i-carbon-add" />
     </button>
   </div>
