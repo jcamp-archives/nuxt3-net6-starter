@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { FormKitNode } from '@formkit/core'
 import type { Person } from '~/models/Person'
 
 let message = $ref('')
@@ -9,7 +8,17 @@ const model = reactive({
   emailAddress: 'im@nonymous.com',
 } as Person)
 
-const submitHandler = async (_data: any, node?: FormKitNode) => {
+onMounted(() => {
+  // document.getElementById('name')?.focus({}).blur()
+  //  setFocus('name')
+  const x = document.getElementsByName('name')[0]
+  x?.focus()
+
+  console.log(x)
+  // setFocus('name')
+})
+
+const submitHandler = async (_data: any, node: any) => {
   message = ''
   try {
     const response = await $fetch<any>('/api/person', {
@@ -18,11 +27,7 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
     })
     message = response.successMessage
   } catch (error: any) {
-    node?.setErrors(error.data.errors, error.data.validationErrors)
-    const x = document.getElementById(
-      Object.keys(error.data.validationErrors)[0]
-    )
-    if (x) nextTick(() => x.focus())
+    handleFormError(error, node)
   }
 }
 </script>
@@ -39,13 +44,14 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
       {{ message }}
     </div>
     <FormKit
+      id="test3"
       v-model="model"
       type="form"
       :submit-attrs="{ inputClass: 'btn' }"
       @submit="submitHandler"
     >
       <FormKit
-        id="name"
+        name="name"
         type="text"
         validation="required|length:1,50"
       />

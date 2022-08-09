@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  // ssr: false,
+  ssr: false,
   css: [
     'primevue/resources/themes/saga-blue/theme.css',
     'primevue/resources/primevue.css',
