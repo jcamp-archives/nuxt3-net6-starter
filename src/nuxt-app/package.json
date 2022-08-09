@@ -12,6 +12,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "lodash-es": "^4.17.21",
     "date-fns": "^2.23.0"
   },
   "devDependencies": {
@@ -26,6 +27,7 @@
     "@sfxcode/formkit-primevue": "^0.6.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
+    "@types/lodash-es": "^4.17.6",
     "@unocss/nuxt": "^0.44.5",
     "@vueuse/nuxt": "^8.9.4",
     "eslint": "^8.20.0",

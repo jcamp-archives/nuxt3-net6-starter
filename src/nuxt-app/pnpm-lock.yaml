@@ -12,12 +12,14 @@ specifiers:
   '@sfxcode/nuxt-primevue': ^0.6.0
   '@tailwindcss/forms': ^0.5.2
   '@tailwindcss/typography': ^0.5.4
+  '@types/lodash-es': ^4.17.6
   '@unocss/nuxt': ^0.44.5
   '@vueuse/nuxt': ^8.9.4
   date-fns: ^2.23.0
   eslint: ^8.20.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
+  lodash-es: ^4.17.21
   nuxt: ^3.0.0-rc.6
   pinia: ^2.0.16
   prettier: 2.7.1
@@ -31,6 +33,7 @@ specifiers:
 
 dependencies:
   date-fns: 2.29.1
+  lodash-es: 4.17.21
 
 devDependencies:
   '@antfu/eslint-config': 0.25.2_qugx7qdu5zevzvxaiqyxfiwquq
@@ -44,6 +47,7 @@ devDependencies:
   '@sfxcode/nuxt-primevue': 0.6.0_tailwindcss@3.1.7
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.7
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.7
+  '@types/lodash-es': 4.17.6
   '@unocss/nuxt': 0.44.7
   '@vueuse/nuxt': 8.9.4
   eslint: 8.21.0
@@ -554,7 +558,7 @@ packages:
     resolution: {integrity: sha512-idgMbrKAaYgi250VZHGmsGR66EQQXodRDzvYJhJjzGhx6+Te8Cl9inpNM8i0Ek0PBZVKsSvo+7z9s45hSha0HA==}
     dependencies:
       '@formkit/vue': 1.0.0-beta.10_tailwindcss@3.1.7
-      '@nuxt/kit': /@nuxt/kit-edge/3.0.0-rc.6-27661960.60656df
+      '@nuxt/kit': /@nuxt/kit-edge/3.0.0-rc.6-27667279.0b22079
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -791,11 +795,11 @@ packages:
     resolution: {integrity: sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==}
     dev: true
 
-  /@nuxt/kit-edge/3.0.0-rc.6-27661960.60656df:
-    resolution: {integrity: sha512-pKoBM8d62K3IVs9SB/Q0j72m+hRtaOtIKkZYMxoGZbGFiIhamm8XEFtrc1OtTA+0CVoMuQTcKbRcXc/F3o2+Hg==}
+  /@nuxt/kit-edge/3.0.0-rc.6-27667279.0b22079:
+    resolution: {integrity: sha512-A7d2Y/5gUYP5AIScrh4tw3bQH0IaAk2mKJW3UlGyGzjDZrz5WnujdFF4t+BtP9uIHfhgO6T/G57fZSETO5LiGg==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0}
     dependencies:
-      '@nuxt/schema': /@nuxt/schema-edge/3.0.0-rc.6-27661960.60656df
+      '@nuxt/schema': /@nuxt/schema-edge/3.0.0-rc.6-27667279.0b22079
       c12: 0.2.9
       consola: 2.15.3
       defu: 6.0.0
@@ -806,7 +810,6 @@ packages:
       knitwork: 0.1.2
       lodash.template: 4.5.0
       mlly: 0.5.7
-      ohash: 0.1.5
       pathe: 0.3.3
       pkg-types: 0.3.3
       scule: 0.3.2
@@ -927,8 +930,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/schema-edge/3.0.0-rc.6-27661960.60656df:
-    resolution: {integrity: sha512-Odpw9uF8tf69iazIxPK0gy3RqB1R1utfwX2DcPCuxQpe5Z68i/V/JUevzDvvMddiG52UHgkJBcFAHGVfZqCNvA==}
+  /@nuxt/schema-edge/3.0.0-rc.6-27667279.0b22079:
+    resolution: {integrity: sha512-CAjruN7WAvVmkYHD6kULlV8rqq7u+Lh1A+Z4ZXDutm2111TByVRAs62wpVCmLLtpac41No3ZC4dIxaMRo3pCuQ==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0}
     dependencies:
       c12: 0.2.9
@@ -1313,6 +1316,16 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.182
+    dev: true
+
+  /@types/lodash/4.14.182:
+    resolution: {integrity: sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==}
     dev: true
 
   /@types/mdast/3.0.10:
@@ -4804,6 +4817,10 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash._reinterpolate/3.0.0:
     resolution: {integrity: sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==}
