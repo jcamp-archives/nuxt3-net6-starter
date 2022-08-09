@@ -53,15 +53,20 @@ const submitHandler = async (_data: any, node: any) => {
       <FormKit
         name="name"
         type="text"
+        label="Name"
         validation="required|length:1,50"
       />
       <FormKit
         id="age"
+        name="age"
+        label="Age"
         type="number"
         validation="required|min:0|max:150"
       />
       <FormKit
         id="emailAddress"
+        name="emailAddress"
+        label="Email"
         type="email"
         validation="email|required"
       />

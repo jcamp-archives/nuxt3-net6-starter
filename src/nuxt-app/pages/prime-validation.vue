@@ -12,12 +12,11 @@ const model = reactive({
 onMounted(() => {
   // document.getElementById('name')?.focus({}).blur()
   //  setFocus('name')
-  nextTick(() => {
-    const x = document.getElementsByName('name')[0]
-    x?.focus()
+  const x = document.getElementsByName('name')[0]
+  x?.focus()
 
-    console.log(x)
-  })
+  console.log(x)
+
   // setFocus('name')
 })
 
@@ -59,11 +58,15 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
       />
       <FormKit
         id="age"
+        name="age"
+        label="Age"
         type="number"
         validation="required|min:0|max:150"
       />
       <FormKit
         id="emailAddress"
+        name="emailAddress"
+        label="Email"
         type="email"
         validation="email|required"
       />
