@@ -36,7 +36,6 @@ const submitHandler = async (_data: any, node: any) => {
       {{ message }}
     </div>
     <FormKit
-      id="test3"
       v-model="model"
       type="form"
       :submit-attrs="{ inputClass: 'btn' }"

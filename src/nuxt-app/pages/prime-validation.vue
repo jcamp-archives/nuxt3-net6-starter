@@ -44,17 +44,17 @@ const submitHandler = async (_data: any, node?: FormKitNode) => {
     >
       <FormKit
         id="name"
-        type="text"
+        type="primeInputText"
         validation="required|length:1,50"
       />
       <FormKit
         id="age"
-        type="number"
+        type="primeInputNumber"
         validation="required|min:0|max:150"
       />
       <FormKit
         id="emailAddress"
-        type="email"
+        type="primeInputText"
         validation="email|required"
       />
     </FormKit>

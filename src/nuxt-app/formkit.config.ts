@@ -21,7 +21,12 @@ const config: DefaultConfigOptions = {
         outer: 'mb-5',
         legend: 'block mb-1 font-bold',
         label() {
-          if (type === 'text' || type === 'number' || type === 'email')
+          if (
+            type === 'text' ||
+            type === 'number' ||
+            type === 'email' ||
+            type === 'password'
+          )
             return 'block mb-1 font-bold'
 
           if (type === 'radio') return 'text-sm text-gray-600 mt-0.5'
@@ -30,7 +35,12 @@ const config: DefaultConfigOptions = {
           if (type === 'radio') return 'flex flex-col flex-grow mt-2'
         },
         input() {
-          if (type === 'text' || type === 'number' || type === 'email')
+          if (
+            type === 'text' ||
+            type === 'number' ||
+            type === 'email' ||
+            type === 'password'
+          )
             return 'w-full h-10 px-3 mb-2 text-base text-gray-700 placeholder-gray-400 border rounded-lg focus:shadow-outline'
 
           if (type === 'radio') return 'mr-2'
