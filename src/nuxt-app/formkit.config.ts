@@ -4,11 +4,11 @@ import * as _ from 'lodash-es'
 import { primeInputs } from '@sfxcode/formkit-primevue'
 
 function autoProps(node: FormKitNode) {
-  // if (node.props.id) {
-  //   node.name = node.props.id
-  //   if (node.props.label === undefined)
-  //     node.props.label = _.startCase(node.props.id)
-  // }
+  if (node.props.id) {
+    node.name = node.props.id
+    if (node.props.label === undefined)
+      node.props.label = _.startCase(node.props.id)
+  }
 }
 
 const config: DefaultConfigOptions = {
