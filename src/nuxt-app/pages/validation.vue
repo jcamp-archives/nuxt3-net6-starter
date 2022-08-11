@@ -16,10 +16,7 @@ const submitHandler = async (_data: any, node: any) => {
   message = ''
   errorMessage = ''
   try {
-    const response = await $fetch<any>('/api/person', {
-      method: 'POST',
-      body: model,
-    })
+    const response = await $postBody('/api/person', model)
     message = response.successMessage
   } catch (error: any) {
     errorMessage = handleFormError(error, node)
