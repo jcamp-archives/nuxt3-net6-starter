@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
-import type { Forecast } from '../models/Forecast'
+import type { IWeatherForecast } from '~/types'
 
-const { pending, data: forecasts } = await useLazyFetch<Forecast[]>(
+const { pending, data: forecasts } = await useLazyFetch<IWeatherForecast[]>(
   '/weatherforecast',
   {
     initialCache: false,

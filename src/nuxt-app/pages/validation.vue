@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { Person } from '~/models/Person'
+import type { IPerson } from '~/types'
 
 let message = $ref('')
 const model = reactive({
   name: 'Isadora Jarr',
   age: 39,
   emailAddress: 'im@nonymous.com',
-} as Person)
+} as IPerson)
 
 onMounted(() => setFocus('name'))
 

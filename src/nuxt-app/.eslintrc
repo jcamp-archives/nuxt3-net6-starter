@@ -3,5 +3,6 @@
   "rules": {
     "antfu/if-newline": "off",
     "prettier/prettier": "warn"
-  }
+  },
+  "ignorePatterns": "**/types/*.ts"
 }

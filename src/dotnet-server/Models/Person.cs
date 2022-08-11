@@ -1,5 +1,8 @@
-﻿namespace dotnet_server;
+﻿using Reinforced.Typings.Attributes;
 
+namespace dotnet_server;
+
+[TsInterface]
 public class Person
 {
     public string Name { get; set; }

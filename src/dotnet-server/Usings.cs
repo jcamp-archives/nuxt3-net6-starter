@@ -6,3 +6,5 @@ global using FluentValidation;
 
 global using Features.Base;
 global using Features.Results;
+
+global using Reinforced.Typings.Attributes;

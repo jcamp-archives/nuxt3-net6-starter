@@ -1,5 +1,6 @@
 ﻿namespace dotnet_server;
 
+[TsInterface]
 public class PersonResult
 {
     public bool IsSuccessful { get; set; } = false;
