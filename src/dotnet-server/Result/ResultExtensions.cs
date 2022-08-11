@@ -42,27 +42,39 @@ public static class ResultExtensions
         }
         return result;
     }
-    public static T Invalid<T>(this T result, ModelStateDictionary modelState) where T : Result
+    public static T Invalid<T>(this T result, ModelStateDictionary modelState, string message = null) where T : Result
     {
         result.Status = ResultStatus.Invalid;
         result.ValidationErrors = modelState.ToDictionary();
+        if (message != null)
+        {
+            result.ErrorMessage = message;
+        }
         return result;
     }
 
-    public static T Invalid<T>(this T result, IEnumerable<string> errors) where T : Result
+    public static T Invalid<T>(this T result, IEnumerable<string> errors, string message = null) where T : Result
     {
         result.Status = ResultStatus.Invalid;
         foreach (var error in errors)
         {
             result.ValidationErrors.Add("", error);
         }
+        if (message != null)
+        {
+            result.ErrorMessage = message;
+        }
         return result;
     }
 
-    public static T Invalid<T>(this T result, string field, string error) where T : Result
+    public static T Invalid<T>(this T result, string field, string error, string message = null) where T : Result
     {
         result.Status = ResultStatus.Invalid;
         result.ValidationErrors.Add(field, error);
+        if (message != null)
+        {
+            result.ErrorMessage = message;
+        }
         return result;
     }
 
