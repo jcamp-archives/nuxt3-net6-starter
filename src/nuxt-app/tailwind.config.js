@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 const forms = require('@tailwindcss/forms')
 const typography = require('@tailwindcss/typography')
+const icons = require('@jcamp/tailwindcss-plugin-icons')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,24 +16,25 @@ module.exports = {
     'app.{js,ts,vue}',
     './formkit.config.ts',
   ],
-  plugins: [typography, forms],
+  plugins: [typography, forms, icons({ scale: 1.2 })],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-to-b-70': 'linear-gradient(to bottom, var(--tw-gradient-stops) 70%)',
+        'gradient-to-b-70':
+          'linear-gradient(to bottom, var(--tw-gradient-stops) 70%)',
       },
       colors: {
         'blazor-blue': '#052767',
         'blazor-indigo': '#3a0647',
-        'teal': colors.teal,
+        teal: colors.teal,
       },
       typography: {
         DEFAULT: {
           css: {
             color: 'inherit',
             a: {
-              'color': 'inherit',
-              'opacity': 0.75,
+              color: 'inherit',
+              opacity: 0.75,
               '&:hover': {
                 opacity: 1,
                 color: colors.teal[600],

@@ -47,22 +47,22 @@ const ToggleNavMenu = (): void => {
 
         <li>
           <nuxt-link to="/">
-            <span class="i-carbon-home mr-3 w-6" /> Home
+            <span class="i-[carbon-home] mr-3 w-6" /> Home
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/Fetch-Data">
-            <span class="i-carbon-list mr-3 w-6" /> Fetch Data
+            <span class="i-[carbon-list] mr-3 w-6" /> Fetch Data
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/Validation">
-            <span class="i-carbon-data-error mr-3 w-6" /> Validation
+            <span class="i-[carbon-data-error] mr-3 w-6" /> Validation
           </nuxt-link>
         </li>
         <li>
           <nuxt-link to="/prime-validation">
-            <span class="i-carbon-data-error mr-3 w-6 text-blue-700" /> Prime
+            <span class="i-[carbon-data-error] mr-3 w-6 text-blue-700" /> Prime
             Validation
           </nuxt-link>
         </li>
