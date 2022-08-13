@@ -8,7 +8,7 @@
       <span class="-mt-2 text-green-500">Nuxt 3</span>
     </div>
     <div
-      class="transition-all-500 hover:rotate-135 i-carbon-add mx-4 my-auto transform text-3xl text-gray-400"
+      class="transition-all-500 hover:rotate-135 mx-4 my-auto transform text-3xl text-gray-400 i-[carbon-add]"
     />
     <div class="children:mx-auto flex flex-col">
       <img
