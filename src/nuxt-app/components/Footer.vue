@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray4 m-5 flex justify-center gap-3 text-xl">
+  <div class="m-5 flex justify-center gap-3 text-xl text-gray-400">
     <NuxtLink
       class="i-[carbon-campsite]"
       to="/"

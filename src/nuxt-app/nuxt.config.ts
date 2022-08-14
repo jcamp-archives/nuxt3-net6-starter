@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
-import PROXY_CONFIG from './proxy.conf'
+import PROXY_CONFIG from './aspnetcore-proxy'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({

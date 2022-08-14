@@ -1,8 +1,4 @@
 {
-  "extends": ["@antfu", "plugin:prettier/recommended"],
-  "rules": {
-    "antfu/if-newline": "off",
-    "prettier/prettier": "warn"
-  },
-  "ignorePatterns": "**/types/*.ts"
+  "plugins": ["tailwindcss"],
+  "extends": ["@antfu", "plugin:tailwindcss/recommended"]
 }
