@@ -4,11 +4,12 @@ const typography = require('@tailwindcss/typography')
 const icons = require('@jcamp/tailwindcss-plugin-icons')
 const animate = require('@jcamp/tailwindcss-plugin-animate')
 const defaultTheme = require('tailwindcss/defaultTheme')
+const formKitTailwind = require('@formkit/themes/tailwindcss');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  plugins: [forms, typography, icons({ scale: 1.2 }), animate],
+  plugins: [forms, typography, icons({ scale: 1.2 }), animate, formKitTailwind],
   content: [
     'components/**/*.{vue,js}',
     'layouts/**/*.vue',
