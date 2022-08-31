@@ -1,6 +1,7 @@
 import type { FormKitNode } from '@formkit/core'
 import type { DefaultConfigOptions } from '@formkit/vue'
 import * as _ from 'lodash-es'
+// @ts-expect-error types not working correctly
 import { primeInputs } from '@sfxcode/formkit-primevue'
 
 function autoProps(node: FormKitNode) {
@@ -50,11 +51,11 @@ const config: DefaultConfigOptions = {
         },
         message: 'text-red-500 text-xs',
         help: 'text-xs text-gray-500',
-      }
+      } as any
 
-      function createClassObject(classesArray) {
-        if (!classesArray) return ''
-        const classList = {}
+      function createClassObject(classesArray: string) {
+        const classList = {} as Record<string, boolean>
+        if (!classesArray) return classList
         classesArray.split(' ').forEach((className) => {
           classList[className] = true
         })
@@ -62,9 +63,9 @@ const config: DefaultConfigOptions = {
       }
 
       const target = classConfig[sectionKey]
-      if (typeof target === 'string') return createClassObject(target)
-      else if (typeof target === 'function')
-        return createClassObject(classConfig[sectionKey]())
+      if (typeof target === 'function') return createClassObject(target())
+
+      return createClassObject(target)
     },
   },
 }

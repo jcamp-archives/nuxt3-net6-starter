@@ -18,18 +18,17 @@ export default defineNuxtConfig({
   ],
   experimental: {
     reactivityTransform: true,
-    viteNode: false,
   },
-  autoImports: {
-    // does not work with types at this point
-    // https://github.com/antfu/unplugin-auto-import/issues/61
-    // imports: [
-    //   {
-    //     name: 'FormKitNode',
-    //     from: '@formkit/core',
-    //   },
-    // ],
-  },
+  // imports: {
+  // does not work with types at this point
+  // https://github.com/antfu/unplugin-auto-import/issues/61
+  // imports: [
+  //   {
+  //     name: 'FormKitNode',
+  //     from: '@formkit/core',
+  //   },
+  // ],
+  // },
   unocss: {
     preflight: false,
   },

@@ -13,7 +13,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
-    "date-fns": "^2.23.0",
+    "date-fns": "^2.29.0",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
@@ -22,26 +22,26 @@
     "@iconify-json/twemoji": "^1.1.5",
     "@jcamp/eslint-config": "^0.4.0",
     "@jcamp/tailwindcss-plugin-animate": "0.1.0",
-    "@jcamp/tailwindcss-plugin-icons": "0.2.0",
+    "@jcamp/tailwindcss-plugin-icons": "0.4.0",
     "@nuxtjs/color-mode": "^3.1.4",
     "@nuxtjs/tailwindcss": "^5.3.2",
-    "@pinia/nuxt": "^0.4.0",
-    "@sfxcode/formkit-primevue": "^0.7.0",
-    "@sfxcode/nuxt-primevue": "^0.6.4",
+    "@pinia/nuxt": "^0.4.1",
+    "@sfxcode/formkit-primevue": "^0.7.4",
+    "@sfxcode/nuxt-primevue": "^0.7.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
     "@types/lodash-es": "^4.17.6",
-    "@vueuse/nuxt": "^9.1.0",
-    "eslint": "^8.22.0",
-    "nuxt": "3.0.0-rc.8",
-    "pinia": "^2.0.18",
+    "@vueuse/nuxt": "^9.1.1",
+    "eslint": "^8.23.0",
+    "nuxt": "npm:nuxt3@latest",
+    "pinia": "^2.0.21",
     "prettier": "2.7.1",
     "primeicons": "^5.0.0",
-    "primevue": "^3.15.0",
+    "primevue": "^3.16.2",
     "run-script-os": "^1.1.6",
-    "sass": "^1.54.0",
+    "sass": "^1.54.7",
     "tailwindcss": "^3.1.8",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.2"
   },
   "pnpm": {
     "peerDependencyRules": {

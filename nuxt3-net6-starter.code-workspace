@@ -8,7 +8,7 @@
       "path": "src/dotnet-server",
       "name": "DotNetServer"
     }
-  ],  
+  ],
   "settings": {
     "files.exclude": {
       "**/.git": true,
@@ -21,7 +21,7 @@
       "**/obj": true,
       "**/.idea": true,
       "**/.vs": true,
-      "**/node_modules": true
+      "**/node_modules": false
     },
     "files.eol": "\n"
   },
