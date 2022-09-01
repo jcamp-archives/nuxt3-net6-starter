@@ -54,14 +54,14 @@ We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https:
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/JohnCampionJr/vitesse-tw-nuxt3/generate).
+[Create a repo from this template on GitHub](https://github.com/JohnCampionJr/nuxt3-net6-starter/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit JohnCampionJr/vitesse-tw-nuxt3 my-nuxt3-app
+npx degit JohnCampionJr/nuxt3-net6-starter my-nuxt3-app
 cd my-nuxt3-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```

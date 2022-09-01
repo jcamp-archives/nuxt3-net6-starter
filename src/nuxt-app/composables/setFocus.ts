@@ -1,7 +1,7 @@
 export function setFocus(id: string | object) {
   setTimeout(() => {
     if (typeof id === 'string') {
-      const x = document.getElementsByName(id)[0]
+      const x = document.getElementById(id)
       if (x) x.focus()
     } else if (typeof id === 'object') {
       const x = document.getElementById(Object.keys(id)[0])
